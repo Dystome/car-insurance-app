@@ -2,17 +2,16 @@ Format
 
 src:
   |__app
-  |	|__authentification
-  |	|__modules
-  |	|__pages
+  |	  |__authentification
+  |	  |__modules
+  |	  |__pages
   |	     |__all global pages
-  |	|__shared
-  | 	     |__components
+  |	  |__shared
+  | 	   |__components
   |	     |__helpers
   |	     |__interfaces
   |	     |__services
-  | 	     |__utilities 
+  | 	   |__utilities
   |__environments
-  |__assets	
-       
-	
+  |__assets
+
