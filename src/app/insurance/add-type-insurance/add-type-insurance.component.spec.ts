@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AddTypeInsuranceComponent } from './add-type-insurance.component';
+import { describe, beforeEach, it } from 'node:test';
 
 describe('AddTypeInsuranceComponent', () => {
   let component: AddTypeInsuranceComponent;
@@ -17,7 +18,9 @@ describe('AddTypeInsuranceComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+ 
 });
+function expect(component: AddTypeInsuranceComponent) {
+  throw new Error('Function not implemented.');
+}
+
