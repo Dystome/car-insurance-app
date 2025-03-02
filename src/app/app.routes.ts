@@ -7,17 +7,20 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './modules/login/login.component';
 import { SignupComponent } from './modules/signup/signup.component';
+import { UserComponent } from './modules/user/user.component';
+import { LoginModule } from './modules/login/login.module';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/signup', pathMatch: 'full' },
+
   { path: 'signup', component: SignupComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'welcome', component: UserComponent },
   { path: "app-component", component: AppComponent },
   { path: "add-demage", component: AddDamagesComponent },
   {path: "add-type-demage" , component:AddTypeOfDamageComponent},
   {path:"calculate-demage" ,  component : CalculateDamageComponent},
   {path:"all-demages" ,  component : AlldemagesComponent},
-  { path: "**", redirectTo: "users-component" }
+  { path: "**", redirectTo: "signup" }
 
 ];
 

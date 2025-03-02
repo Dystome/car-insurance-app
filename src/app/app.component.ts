@@ -5,12 +5,7 @@ import { RouterLink, RouterModule } from '@angular/router';
 @Component({
   selector: 'app-root',
   imports: [RouterModule],
-  template: `
-    <div>
-      <router-outlet>
-      </router-outlet>
-    </div>
-  `,
+  templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {

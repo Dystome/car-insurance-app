@@ -2,6 +2,7 @@ import { JsonPipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from '../../shared/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -13,18 +14,18 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   username: string = '';
   password: string = '';
+  private signedIn: boolean = false;
 
-  constructor(private router: Router) {}
+  constructor(private authService: AuthService, private router: Router) {}
   login() {
-    const users = JSON.parse(localStorage.getItem('user') || '{}');
-    if (this.username === users.username && this.password === users.password) {
-      alert('Login successful!');
+    if (this.authService.signIn(this.username, this.password)) {
+      this.router.navigate(['app-component']);
     } else {
-      alert('Invalid credentials!');
+      alert('Invalid credentials');
     }
   }
   goToSignUp() {
-    this.router.navigate(['/signup']);
+    this.router.navigate(['signup']);
   }
 }
 
