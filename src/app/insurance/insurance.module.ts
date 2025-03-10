@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AppComponent } from '../app.component';
-
+import { AddIsuranceComponent } from './add-isurance/add-isurance.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+  ],
   imports: [
     CommonModule,
-    AppComponent
+    AppComponent,
+    AddIsuranceComponent
   ]
 })
 export class InsuranceModule { }

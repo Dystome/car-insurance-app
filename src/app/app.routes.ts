@@ -7,6 +7,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './modules/login/login.component';
 import { SignupComponent } from './modules/signup/signup.component';
+import { AddIsuranceComponent } from './insurance/add-isurance/add-isurance.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/signup', pathMatch: 'full' },
@@ -17,6 +18,7 @@ export const routes: Routes = [
   {path: "add-type-demage" , component:AddTypeOfDamageComponent},
   {path:"calculate-demage" ,  component : CalculateDamageComponent},
   {path:"all-demages" ,  component : AlldemagesComponent},
+  {path:"add-insurance", component: AddIsuranceComponent},
   { path: "**", redirectTo: "users-component" }
 
 ];
